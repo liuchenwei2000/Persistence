@@ -11,7 +11,7 @@ import java.sql.Statement;
 import util.DBHelper;
 
 /**
- * MSSQL数据库使用的CustomerDAO
+ * MSSQL 数据库使用的 CustomerDAO
  * 
  * @author 刘晨伟
  * 

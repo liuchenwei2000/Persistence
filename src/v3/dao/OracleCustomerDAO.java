@@ -11,7 +11,7 @@ import java.sql.Statement;
 import util.DBHelper;
 
 /**
- * Oracle数据库使用的CustomerDAO
+ * Oracle 数据库使用的 CustomerDAO
  * 
  * @author 刘晨伟
  * 

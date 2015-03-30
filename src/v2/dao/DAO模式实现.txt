@@ -1,6 +1,6 @@
 
-DAO（Data Access Object）模式实际上是两个模式的组合，即Data Accessor模式和Active Domain Object模式，
-其中Data Accessor 模式实现了数据访问和业务逻辑的分离，而Active Domain Object模式实现了业务数据的对象化封装。
+DAO（Data Access Object）模式实际上是两个模式的组合，即 Data Accessor 模式和 Active Domain Object 模式，
+其中 Data Accessor 模式实现了数据访问和业务逻辑的分离，而 Active Domain Object 模式实现了业务数据的对象化封装。
 
-DAO模式通过对底层数据的封装，为业务层提供了一个面向对象的接口，使得业务逻辑开发人员可以面相业务中的实体进行编码。
-通过引入DAO模式，业务逻辑更加清晰，且富于形象性和描述性，提高了可维护性。
+DAO 模式通过对底层数据的封装，为业务层提供了一个面向对象的接口，使得业务逻辑开发人员可以面向业务中的实体进行编码。
+通过引入 DAO 模式，业务逻辑更加清晰，且富于形象性和描述性，提高了可维护性。
