@@ -7,17 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * CustomerDAO¹¤³§
+ * CustomerDAOå·¥å‚
  * <p>
- * ¾ßÌåÊµÏÖÀà¿ÉÔÚÅäÖÃÎÄ¼şÖĞ¼ÓÒÔÅäÖÃ£¬Ö®ºóÓÉDAOFactory¶ÁÈ¡¡£
+ * å…·ä½“å®ç°ç±»å¯åœ¨é…ç½®æ–‡ä»¶ä¸­åŠ ä»¥é…ç½®ï¼Œä¹‹åç”±DAOFactoryè¯»å–ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class CustomerDAOFactory {
 
-	// ÕâÀïµÄÅäÖÃĞÅÏ¢Ò²¿ÉÒÔ·ÅÔÚÍâ²¿µÄxmlÖĞ
+	// è¿™é‡Œçš„é…ç½®ä¿¡æ¯ä¹Ÿå¯ä»¥æ”¾åœ¨å¤–éƒ¨çš„xmlä¸­
 	private static Map<String,CustomerDAO> dao_map;
 	
 	static {
@@ -27,7 +27,7 @@ public class CustomerDAOFactory {
 	}
 	
 	/**
-	 * ´´½¨CustomerDAO
+	 * åˆ›å»ºCustomerDAO
 	 */
 	public static CustomerDAO create(){
 		String dbType = getDBType();
@@ -35,7 +35,7 @@ public class CustomerDAOFactory {
 	}
 
 	private static String getDBType() {
-		// ÕâÀïÄ£Äâ·µ»ØÔËĞĞ»·¾³Ê¹ÓÃµÄÊı¾İ¿âĞÅÏ¢
+		// è¿™é‡Œæ¨¡æ‹Ÿè¿”å›è¿è¡Œç¯å¢ƒä½¿ç”¨çš„æ•°æ®åº“ä¿¡æ¯
 		return "oracle";
 	}
 }

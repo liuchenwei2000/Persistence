@@ -23,13 +23,13 @@ import java.util.Properties;
 import java.util.concurrent.Executor;
 
 /**
- * Conneciton×°ÊÎÆ÷
+ * Connecitonè£…é¥°å™¨
  * <p>
- * ±¡±¡µÄÒ»²ã·â×°£¬ËùÒÔ²Ù×÷»¹ÊÇÎ¯ÍĞ¸ø¾ßÌåÁ¬½ÓÖ´ĞĞ¡£
+ * è–„è–„çš„ä¸€å±‚å°è£…ï¼Œæ‰€ä»¥æ“ä½œè¿˜æ˜¯å§”æ‰˜ç»™å…·ä½“è¿æ¥æ‰§è¡Œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public abstract class ConnectionDecorator implements Connection {
 

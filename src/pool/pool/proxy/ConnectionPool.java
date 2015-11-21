@@ -10,21 +10,21 @@ import java.util.List;
 import pool.MockConnection;
 
 /**
- * Êı¾İ¿âÁ¬½Ó³ØÊ¾Àı
+ * æ•°æ®åº“è¿æ¥æ± ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class ConnectionPool {
 	
-	/** ³ØÖĞ×î´óÁ¬½ÓÊı */
+	/** æ± ä¸­æœ€å¤§è¿æ¥æ•° */
 	private static final int MAX_SIZE = 10;
 
 	private List<ConnectionBox> pool = new ArrayList<ConnectionBox>(MAX_SIZE);
 	
 	/**
-	 * ´Ó³ØÖĞ»ñÈ¡Ò»¸öÊı¾İ¿âÁ¬½Ó
+	 * ä»æ± ä¸­è·å–ä¸€ä¸ªæ•°æ®åº“è¿æ¥
 	 */
 	public synchronized Connection getConnection(){
 		Connection connection = null;
@@ -34,15 +34,15 @@ public class ConnectionPool {
 		} else {
 			connection = findFreeConnection();
 		}
-		// ·µ»ØÕæÕıÊı¾İ¿âÁ¬½ÓµÄÒ»¸ö´úÀí¶ÔÏó
+		// è¿”å›çœŸæ­£æ•°æ®åº“è¿æ¥çš„ä¸€ä¸ªä»£ç†å¯¹è±¡
 		return new ConnectionHandler(this).proxy(connection);
 	}
 	
 	/**
-	 * ´´½¨ÕæÕıµÄÎïÀíÁ¬½Ó
+	 * åˆ›å»ºçœŸæ­£çš„ç‰©ç†è¿æ¥
 	 */
 	private Connection createConnection(){
-		// Í¨¹ıDriverManager»òÕßÆäËû·½Ê½´´½¨Ò»¸öÕæÕıµÄÊı¾İ¿âÁ¬½Ó
+		// é€šè¿‡DriverManageræˆ–è€…å…¶ä»–æ–¹å¼åˆ›å»ºä¸€ä¸ªçœŸæ­£çš„æ•°æ®åº“è¿æ¥
 		Connection conn = new MockConnection();
 		return conn;
 	}
@@ -54,11 +54,11 @@ public class ConnectionPool {
 				return connBox.getConnection();
 			}
 		}
-		throw new RuntimeException("µ±Ç°Ã»ÓĞ¿ÉÓÃÁ¬½Ó.");
+		throw new RuntimeException("å½“å‰æ²¡æœ‰å¯ç”¨è¿æ¥.");
 	}
 	
 	/**
-	 * ½«Êı¾İ¿âÁ¬½Ó·Å»Ø³ØÖĞ
+	 * å°†æ•°æ®åº“è¿æ¥æ”¾å›æ± ä¸­
 	 */
 	public synchronized void releaseConnection(Connection con) {
 		for (ConnectionBox connBox : pool) {
@@ -71,7 +71,7 @@ public class ConnectionPool {
 	private static class ConnectionBox {
 		
 		private Connection connection;
-		private boolean isInUse;// ÊÇ·ñÔÚÊ¹ÓÃ
+		private boolean isInUse;// æ˜¯å¦åœ¨ä½¿ç”¨
 		
 		public ConnectionBox(Connection connection, boolean isInUse) {
 			this.connection = connection;

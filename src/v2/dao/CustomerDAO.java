@@ -11,19 +11,19 @@ import java.sql.Statement;
 import util.DBHelper;
 
 /**
- * Data AccessorÄ£Ê½
+ * Data Accessoræ¨¡å¼
  * <p>
- * Êı¾İ¿â·ÃÎÊ²ãÊµÏÖ±»Òş²Øµ½ÁËData AccessorÖĞ£¬Ëü½«Êı¾İ·ÃÎÊµÄÊµÏÖ»úÖÆ¼ÓÒÔ·â×°£¬ÓëÊı¾İµÄÊ¹ÓÃ´úÂëÏà·ÖÀë¡£
- * ´ÓÍâ²¿À´¿´£¬Data AccessorÌá¹©ÁËºÚºĞÊ½µÄÊı¾İ´æÈ¡½Ó¿Ú¡£
+ * æ•°æ®åº“è®¿é—®å±‚å®ç°è¢«éšè—åˆ°äº†Data Accessorä¸­ï¼Œå®ƒå°†æ•°æ®è®¿é—®çš„å®ç°æœºåˆ¶åŠ ä»¥å°è£…ï¼Œä¸æ•°æ®çš„ä½¿ç”¨ä»£ç ç›¸åˆ†ç¦»ã€‚
+ * ä»å¤–éƒ¨æ¥çœ‹ï¼ŒData Accessoræä¾›äº†é»‘ç›’å¼çš„æ•°æ®å­˜å–æ¥å£ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class CustomerDAO {
 
 	/**
-	 * ²éÑ¯¿Í»§
+	 * æŸ¥è¯¢å®¢æˆ·
 	 */
 	public Customer getCustomer(String id) {
 		String sql = "select id, amount from customers where id='" + id + "'";
@@ -65,7 +65,7 @@ public class CustomerDAO {
 	}
 	
 	/**
-	 * ±£´æ¿Í»§
+	 * ä¿å­˜å®¢æˆ·
 	 */
 	public void save(Customer customer) {
 		String sql = "update customers set amount=" + customer.getAmount()

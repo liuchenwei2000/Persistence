@@ -7,11 +7,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * Êı¾İ¿âÁ¬½Ó¿Í»§¶ËÀà
+ * æ•°æ®åº“è¿æ¥å®¢æˆ·ç«¯ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class Client {
 

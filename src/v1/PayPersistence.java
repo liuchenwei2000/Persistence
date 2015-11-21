@@ -10,32 +10,32 @@ import java.sql.Statement;
 import util.DBHelper;
 
 /**
- * ´«Í³·½Ê½ÊµÏÖ ¿Í»§¸¶¿îÒµÎñ
+ * ä¼ ç»Ÿæ–¹å¼å®ç° å®¢æˆ·ä»˜æ¬¾ä¸šåŠ¡
  * <p>
- * ÒµÎñÂß¼­ºÍÊı¾İ·ÃÎÊÂß¼­È«²¿ÔÚÒ»¸öÀàÖĞÍê³É¡£
+ * ä¸šåŠ¡é€»è¾‘å’Œæ•°æ®è®¿é—®é€»è¾‘å…¨éƒ¨åœ¨ä¸€ä¸ªç±»ä¸­å®Œæˆã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class PayPersistence {
 
 	/**
-	 * ¿Í»§¸¶¿î²Ù×÷
+	 * å®¢æˆ·ä»˜æ¬¾æ“ä½œ
 	 */
 	public void pay(String customer_id, double amount) throws Exception {
 		Connection connection = DBHelper.getConnection();
 		Statement stmt = connection.createStatement();
-		// ÕâÀïÊÇÊı¾İ·ÃÎÊÂß¼­
+		// è¿™é‡Œæ˜¯æ•°æ®è®¿é—®é€»è¾‘
 		String sql = "select amount from customers where id='" + customer_id + "'";
 		ResultSet resultSet = stmt.executeQuery(sql);
 		if(resultSet.next()) {
-			// ÕâÀïÊÇÒµÎñÂß¼­
+			// è¿™é‡Œæ˜¯ä¸šåŠ¡é€»è¾‘
 			double amount_left = resultSet.getDouble(1);
 			if(amount_left < amount){
-				throw new RuntimeException("Óà¶îÒÑ²»×ã£¬ÎŞ·¨Íê³ÉÖ§¸¶¡£");
+				throw new RuntimeException("ä½™é¢å·²ä¸è¶³ï¼Œæ— æ³•å®Œæˆæ”¯ä»˜ã€‚");
 			}
-			// ÕâÀïÊÇÊı¾İ·ÃÎÊÂß¼­
+			// è¿™é‡Œæ˜¯æ•°æ®è®¿é—®é€»è¾‘
 			sql = "update customers set amount=amount-" + amount + " where id='" + customer_id + "'";
 			Statement stmt2 = connection.createStatement();
 			stmt2.executeUpdate(sql);

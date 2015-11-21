@@ -7,13 +7,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * ���ݿ����ӿͻ�����
+ * 数据库连接客户端类
  * <p>
- * ��ȡ���ݿ����Ӻ󣬵�����ֻ��Ҫ����JDBC Connection�ı�׼�÷����е��ü��ɣ��Ӷ�ʵ�������ݿ����ӳص�͸������
+ * 获取数据库连接后，调用者只需要按照JDBC Connection的标准用法进行调用即可，从而实现了数据库连接池的透明化。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2014��7��21��
+ * 创建日期：2014年7月21日
  */
 public class Client {
 

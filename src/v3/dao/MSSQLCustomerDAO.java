@@ -11,16 +11,16 @@ import java.sql.Statement;
 import util.DBHelper;
 
 /**
- * MSSQL Êı¾İ¿âÊ¹ÓÃµÄ CustomerDAO
+ * MSSQL æ•°æ®åº“ä½¿ç”¨çš„ CustomerDAO
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class MSSQLCustomerDAO implements CustomerDAO {
 
 	/**
-	 * ²éÑ¯¿Í»§
+	 * æŸ¥è¯¢å®¢æˆ·
 	 */
 	public Customer getCustomer(String id) {
 		String sql = "select id, amount from customers where id='" + id + "'";
@@ -62,7 +62,7 @@ public class MSSQLCustomerDAO implements CustomerDAO {
 	}
 	
 	/**
-	 * ±£´æ¿Í»§
+	 * ä¿å­˜å®¢æˆ·
 	 */
 	public void save(Customer customer) {
 		String sql = "update customers set amount=" + customer.getAmount()

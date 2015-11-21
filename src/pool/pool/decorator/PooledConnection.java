@@ -7,13 +7,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * ¿É·ÅÈëÁ¬½Ó³ØµÄConnection
+ * å¯æ”¾å…¥è¿æ¥æ± çš„Connection
  * <p>
- * ÓÃÀ´×°ÊÎÕæÊµConnection¶ÔÏó£¬µ±¹Ø±ÕÁ¬½ÓµÄÊ±ºò£¬²¢²»ÊÇÕæÕıµÄclose£¬¶øÊÇ·Å»Ø³ØÖĞ¡£
+ * ç”¨æ¥è£…é¥°çœŸå®Connectionå¯¹è±¡ï¼Œå½“å…³é—­è¿æ¥çš„æ—¶å€™ï¼Œå¹¶ä¸æ˜¯çœŸæ­£çš„closeï¼Œè€Œæ˜¯æ”¾å›æ± ä¸­ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class PooledConnection extends ConnectionDecorator {
 
@@ -26,7 +26,7 @@ public class PooledConnection extends ConnectionDecorator {
 
 	@Override
 	public void close() throws SQLException {
-		// ½«Á¬½Ó·Å»Ø³ØÖĞ£¬¶ø²»ÊÇÖ±½Ó¹Ø±ÕÁ¬½Ó¡£
+		// å°†è¿æ¥æ”¾å›æ± ä¸­ï¼Œè€Œä¸æ˜¯ç›´æ¥å…³é—­è¿æ¥ã€‚
 		this.pool.releaseConnection(realConnection);
 	}
 }

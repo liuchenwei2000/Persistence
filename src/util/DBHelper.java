@@ -6,26 +6,26 @@ package util;
 import java.sql.Connection;
 
 /**
- * Êı¾İ¿â²Ù×÷¸¨ÖúÀà
+ * æ•°æ®åº“æ“ä½œè¾…åŠ©ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class DBHelper {
 
 	/**
-	 * »ñÈ¡Ò»¸öÁ¬½Ó
+	 * è·å–ä¸€ä¸ªè¿æ¥
 	 */
 	public static Connection getConnection() {
-		// ´ÓÁ¬½Ó³Ø»ñÈ¡Connection¶ÔÏó
+		// ä»è¿æ¥æ± è·å–Connectionå¯¹è±¡
 		return null;
 	}
 	
 	/**
-	 * ÊÍ·ÅÒ»¸öÁ¬½Ó
+	 * é‡Šæ”¾ä¸€ä¸ªè¿æ¥
 	 */
 	public static void releaseConnection(Connection con){
-		// ½«Connection·Å»ØÁ¬½Ó³Ø
+		// å°†Connectionæ”¾å›è¿æ¥æ± 
 	}
 }

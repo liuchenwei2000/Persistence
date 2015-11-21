@@ -4,21 +4,21 @@
 package v3.dao;
 
 /**
- * CustomerDAO½Ó¿Ú
+ * CustomerDAOæ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public interface CustomerDAO {
 
 	/**
-	 * ²éÑ¯¿Í»§
+	 * æŸ¥è¯¢å®¢æˆ·
 	 */
 	public Customer getCustomer(String id);
 	
 	/**
-	 * ±£´æ¿Í»§
+	 * ä¿å­˜å®¢æˆ·
 	 */
 	public void save(Customer customer);
 }

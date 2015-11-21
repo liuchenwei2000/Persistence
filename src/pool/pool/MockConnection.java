@@ -23,11 +23,11 @@ import java.util.Properties;
 import java.util.concurrent.Executor;
 
 /**
- * ĞéÄâÁ¬½Ó£¬½ö¹©²âÊÔÊ¹ÓÃ
+ * è™šæ‹Ÿè¿æ¥ï¼Œä»…ä¾›æµ‹è¯•ä½¿ç”¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class MockConnection implements Connection {
 

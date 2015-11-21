@@ -9,11 +9,11 @@ import java.lang.reflect.Proxy;
 import java.sql.Connection;
 
 /**
- * ¶¯Ì¬´úÀíÄ£Ê½´¦ÀíConnectionµÄ³Ø»¯
+ * åŠ¨æ€ä»£ç†æ¨¡å¼å¤„ç†Connectionçš„æ± åŒ–
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class ConnectionHandler implements InvocationHandler {
 
@@ -25,7 +25,7 @@ public class ConnectionHandler implements InvocationHandler {
 	}
 	
 	/**
-	 * ·µ»Ø²ÎÊıÁ¬½Ó¶ÔÏóµÄÒ»¸ö´úÀí¶ÔÏó
+	 * è¿”å›å‚æ•°è¿æ¥å¯¹è±¡çš„ä¸€ä¸ªä»£ç†å¯¹è±¡
 	 */
 	public Connection proxy(Connection realConnection) {
 		this.realConnection = realConnection;
@@ -34,7 +34,7 @@ public class ConnectionHandler implements InvocationHandler {
 	}
 
 	/**
-	 * ÔÚÕâ¸ö·½·¨Àï£¬´úÀí¶ÔÏó»á¶Ôclose·½·¨½øĞĞÌØÊâ´¦Àí
+	 * åœ¨è¿™ä¸ªæ–¹æ³•é‡Œï¼Œä»£ç†å¯¹è±¡ä¼šå¯¹closeæ–¹æ³•è¿›è¡Œç‰¹æ®Šå¤„ç†
 	 * 
 	 * @see java.lang.reflect.InvocationHandler#invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])
 	 */
@@ -43,7 +43,7 @@ public class ConnectionHandler implements InvocationHandler {
 			throws Throwable {
 		Object obj = null;
 		if ("close".equals(method.getName())) {
-			// ½«Êı¾İ¿âÁ¬½Ó·Å»ØÁ¬½Ó³Ø¶ø²»ÊÇÖ±½Ó¹Ø±Õ
+			// å°†æ•°æ®åº“è¿æ¥æ”¾å›è¿æ¥æ± è€Œä¸æ˜¯ç›´æ¥å…³é—­
 			pool.releaseConnection(realConnection);
 		} else {
 			obj = method.invoke(realConnection, args);

@@ -8,24 +8,24 @@ import v3.dao.CustomerDAO;
 import v3.dao.CustomerDAOFactory;
 
 /**
- * ÒµÎñ²ã
+ * ä¸šåŠ¡å±‚
  * <p>
- * ÒµÎñ²ãÍ¨¹ı½Ó¿Úµ÷ÓÃµ×²ãÊµÏÖ£¬¾ßÌåµÄDAOÊµÏÖÀà²»»á³öÏÖÔÚÒµÎñ´úÂëÖĞ¡£
+ * ä¸šåŠ¡å±‚é€šè¿‡æ¥å£è°ƒç”¨åº•å±‚å®ç°ï¼Œå…·ä½“çš„DAOå®ç°ç±»ä¸ä¼šå‡ºç°åœ¨ä¸šåŠ¡ä»£ç ä¸­ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class PayPersistence {
 
 	/**
-	 * ¿Í»§¸¶¿î
+	 * å®¢æˆ·ä»˜æ¬¾
 	 */
 	public void pay(String customer_id, double amount) throws Exception {
 		CustomerDAO dao = CustomerDAOFactory.create();
 		Customer customer = dao.getCustomer(customer_id);
 		if(customer.getAmount() < amount){
-			throw new RuntimeException("Óà¶îÒÑ²»×ã£¬ÎŞ·¨Íê³ÉÖ§¸¶¡£");
+			throw new RuntimeException("ä½™é¢å·²ä¸è¶³ï¼Œæ— æ³•å®Œæˆæ”¯ä»˜ã€‚");
 		}
 		customer.setAmount(customer.getAmount() - amount);
 		dao.save(customer);

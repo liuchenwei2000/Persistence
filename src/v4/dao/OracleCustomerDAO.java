@@ -4,24 +4,24 @@
 package v4.dao;
 
 /**
- * OracleÊı¾İ¿âÊ¹ÓÃµÄCustomerDAO
+ * Oracleæ•°æ®åº“ä½¿ç”¨çš„CustomerDAO
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ21ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ21æ—¥
  */
 public class OracleCustomerDAO implements CustomerDAO {
 
 	/**
-	 * ²éÑ¯¿Í»§
+	 * æŸ¥è¯¢å®¢æˆ·
 	 */
 	public Customer getCustomer(String id) {
-		// ÒıÈë³Ö¾Ã²ã¿ò¼ÜÖ®ºó£¬ORÓ³ÉäÒÔ¼°ÓëÊı¾İ¿âÍ¨ĞÅµÄJDBC´úÂë¶¼¿ÉÒÔÓÉÆäÀ´Íê³É
+		// å¼•å…¥æŒä¹…å±‚æ¡†æ¶ä¹‹åï¼ŒORæ˜ å°„ä»¥åŠä¸æ•°æ®åº“é€šä¿¡çš„JDBCä»£ç éƒ½å¯ä»¥ç”±å…¶æ¥å®Œæˆ
 		return null;
 	}
 	
 	/**
-	 * ±£´æ¿Í»§
+	 * ä¿å­˜å®¢æˆ·
 	 */
 	public void save(Customer customer) {
 	}
